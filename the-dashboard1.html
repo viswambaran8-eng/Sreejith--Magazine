@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazine</title>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+        integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+        integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./the-dashboard1.css">
+</head>
+
+<body>
+    <header>
+        <div >
+      <a href="./index.html">
+      <img class="logo"  src="./images/logo_11zon_11zon (1)_11zon.webp" alt="">
+      </a>
+    </div>
+        <nav class="menu_bar">
+
+            <ul>
+                <li><a class="" href="./index.html">Home <i class="fa-solid fa-caret-down"></i></a>
+                    <div class="dropdown_menu1">
+                        <ul>
+                            <li>
+                                <a href="./index2.html">Home 2</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a class="" href="./about.html">About Us</a></li>
+                <!-- <li><a class="" href="#">Blog</a></li> -->
+                <li><a class="" href="#">Category <i class="fa-solid fa-caret-down"></i></a>
+                    <div class="dropdown_menu">
+                        <ul>
+                            <li><a href="./news.html">News</a></li>
+                            <li><a href="./health.html">Health</a></li>
+                            <li><a href="./sport.html">Sports</a></li>
+                            <li><a href="./travel.html">Travel</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a class="" href="./contact.html">Contact Us</a></li>
+                <li><a class="" href="./the-dashboard1.html">Dashboard</a></li>
+            </ul>
+        </nav>
+        <ul>
+            <li><a class="" href="./sign-in.html"><i style="font-size: 30px;color: white;"
+                        class="fa-regular fa-circle-user"></i> </a></li>
+            <div class="hamburger">
+                <div class="lines"></div>
+                <div class="lines"></div>
+                <div class="lines"></div>
+            </div>
+        </ul>
+    </header>
+
+    <div id="sidebar" class="sidebar">
+        <div class="close-btn">&times;</div>
+        <ul>
+            <li>
+                <div class="flexdiv">
+                    <a href="./index.html">Home </a>
+                    <span class="dropdownArrow">&#9662;</span>
+                </div>
+                <ul class="submenu">
+                    <li><a href="index2.html">Home 2</a></li>
+                </ul>
+            </li>
+            <li><a href="./about.html">About Us</a></li>
+            <li>
+                <a href="#">Category <span class="dropdownArrow1">&#9662;</span></a>
+                <ul class="submenu2">
+                    <li><a href="./news.html">News</a></li>
+                    <li><a href="./health.html">Health</a></li>
+                    <li><a href="./sport.html">Sports</a></li>
+                    <li><a href="./travel.html">Travel</a></li>
+                </ul>
+            </li>
+            <li><a href="./contact.html">Contact Us</a></li>
+            <li><a href="./the-dashboard1.html">Dashboard</a></li>
+            <li><a href="./sign-in.html">Sign In</a></li>
+        </ul>
+    </div>
+
+    <div class="header">
+        <h1>🌍 Inspire360 Magazine</h1>
+        <nav class="h-red">
+            <ul>
+                <li><a href="#news">News</a></li>
+                <li><a href="#travel">Travel</a></li>
+                <li><a href="#sports">Sports</a></li>
+                <li><a href="#health">Health</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="Table">
+        <!-- 🔹 News Section -->
+        <div id="news" class="section">
+            <h2>Latest News</h2>
+            <div class="dashboard">
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>India Records Strong GDP Growth</h3>
+                        <p>India’s economy grows 7.3% in Q3, showing strong performance in manufacturing and exports.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Tech Giants Embrace Green Energy</h3>
+                        <p>Leading IT firms pledge carbon neutrality by 2030 with new renewable energy projects.</p>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="newsChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- 🔹 Travel Section -->
+        <div id="travel" class="section">
+            <h2>Travel Insights</h2>
+            <div class="dashboard">
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>Goa’s Record Tourist Season</h3>
+                        <p>Eco-friendly tourism drives a 20% increase in visitors compared to last year.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Kashmir Winter Tourism Booms</h3>
+                        <p>Snow sports and cultural tours bring travelers from across India.</p>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="travelChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- 🔹 Sports Section -->
+        <div id="sports" class="section">
+            <h2>Sports Highlights</h2>
+            <div class="dashboard">
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>India Wins Women’s ODI Trophy</h3>
+                        <p>Smriti Mandhana’s unbeaten 124 leads India to glory and global recognition.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Neeraj Chopra Wins Gold Again</h3>
+                        <p>The javelin ace dominates the Diamond League with a 90m throw.</p>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="sportsChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- 🔹 Health Section -->
+        <div id="health" class="section">
+            <h2>Health Trends</h2>
+            <div class="dashboard">
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>AI Predicts Heart Disease Risk</h3>
+                        <p>New machine learning model identifies heart risks using simple health indicators.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Yoga & Wellness Gaining Momentum</h3>
+                        <p>Global health experts promote India’s traditional wellness practices.</p>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="healthChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>© 2025 Inspire360 | News • Travel • Sports • Health</p>
+    </footer>
+    <script>
+        // === Chart.js Data ===
+
+        // NEWS CHART
+        new Chart(document.getElementById('newsChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Economy', 'Tech', 'Education', 'Space'],
+                datasets: [{
+                    label: 'Public Interest (%)',
+                    data: [80, 70, 60, 75],
+                    backgroundColor: ['#ff6347', '#ffa07a', '#ffb347', '#ffcc99']
+                }]
+            },
+            options: { responsive: true, plugins: { legend: { display: false } } }
+        });
+
+        // TRAVEL CHART
+        new Chart(document.getElementById('travelChart'), {
+            type: 'pie',
+            data: {
+                labels: ['Goa', 'Kashmir', 'Ooty', 'Munnar'],
+                datasets: [{
+                    data: [35, 25, 20, 20],
+                    backgroundColor: ['#1abc9c', '#16a085', '#48c9b0', '#7fffd4']
+                }]
+            },
+            options: { responsive: true, plugins: { legend: { display: false } } }
+
+        });
+
+        // SPORTS CHART
+        new Chart(document.getElementById('sportsChart'), {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Sports Popularity Index',
+                    data: [65, 70, 80, 75, 90, 85],
+                    borderColor: '#2ecc71',
+                    fill: false,
+                    tension: 0.3
+                }]
+            },
+            options: { responsive: true, plugins: { legend: { display: false } } }
+        });
+
+        // HEALTH CHART
+        new Chart(document.getElementById('healthChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['AI Health Tools', 'Yoga', 'Nutrition', 'Fitness'],
+                datasets: [{
+                    data: [30, 25, 25, 20],
+                    backgroundColor: ['#ff6f61', '#ffb6b9', '#ff9a8b', '#ffa07a']
+                }]
+            },
+            options: { responsive: true, plugins: { legend: { display: false } } }
+
+        });
+
+    </script>
+    
+    <script src="./swipe.js"></script>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const sidebar = document.getElementById('sidebar');
+        const closeBtn = document.querySelector('.close-btn');
+        const dropdowns = document.querySelector('.dropdownArrow');
+        const dropdown1 = document.querySelector('.dropdownArrow1');
+        const subMenu = document.querySelector('.submenu');
+        const subMenu2 = document.querySelector('.submenu2');
+
+
+        // Open sidebar
+        hamburger.addEventListener('click', () => {
+            sidebar.style.width = '100%';
+        });
+
+        // Close sidebar
+        closeBtn.addEventListener('click', () => {
+            sidebar.style.width = '0';
+        });
+
+        // Toggle submenus
+
+        dropdowns.addEventListener('click', () => {
+            subMenu.classList.toggle('submenu')
+            subMenu.classList.toggle('submenu1')
+        })
+
+        dropdown1.addEventListener('click', () => {
+            subMenu2.classList.toggle('submenu2')
+            subMenu2.classList.toggle('submenu1')
+        })
+    </script>
+
+</body>
+
+</html>
